@@ -1,18 +1,16 @@
 import {Component, ViewChild} from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
+import {Nav, Platform, MenuController} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { Events } from 'ionic-angular';
 
 import {PropertyListPage} from '../pages/property-list/property-list';
-import {BrokerListPage} from '../pages/broker-list/broker-list';
-import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
+
 import {WelcomePage} from '../pages/welcome/welcome';
-import {AboutPage} from '../pages/about/about';
-import {LoginPage} from '../pages/login/login';
-import {ContactPage} from '../pages/contact/contact';
+
 import { PropertyService } from '../providers/property-service-mock';
-import { LogoutPage } from '../pages/logout/logout';
+
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 export interface MenuItem {
     title: string;
@@ -26,7 +24,7 @@ export interface MenuItem {
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = WelcomePage;
+    rootPage: any = TutorialPage;
 
     appMenuItems: Array<MenuItem>;
 
@@ -36,32 +34,29 @@ export class MyApp {
 
     contactMenuItems: Array<MenuItem>;
 
+    
+    
+
     events:Events;
 
     constructor(public platform: Platform, public statusBar: StatusBar, 
-        public splashScreen: SplashScreen, events:Events, public propertyService: PropertyService) {
+        public splashScreen: SplashScreen, events:Events, public propertyService: PropertyService, public menu: MenuController) {
 
 
 
         this.appMenuItems = [
             {title: 'Properties', component: PropertyListPage, icon: 'home'},
-            {title: 'Brokers', component: BrokerListPage, icon: 'people'},
-            {title: 'Favorites', component: FavoriteListPage, icon: 'star'}
+            
         ];
 
-        this.accountMenuItems = [
-            {title: 'My Account', component: LoginPage, icon: 'ios-contact'},
-            {title: 'Logout', component: LogoutPage, icon: 'log-out'},
-        ];
+       
 
         this.helpMenuItems = [
             {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'About', component: AboutPage, icon: 'information-circle'},
+            
         ];
 
-        this.contactMenuItems = [
-          {title: 'Contact Us', component: ContactPage, icon: 'call'},
-        ];
+      
 
         events.subscribe('username:changed', username => {
             if(username !== undefined && username !== ""){
@@ -80,11 +75,11 @@ export class MyApp {
             this.statusBar.styleLightContent();
             this.splashScreen.hide();
         });
-        console.log(JSON.parse(localStorage.getItem('currentUser')));
+        this.menu.enable(false);
         if(JSON.parse(localStorage.getItem('currentUser')) !=  null)
         {
             let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            this.accountMenuItems[0].title = currentUser.name;
+           // this.accountMenuItems[0].title = currentUser.name;
 
         }
     }

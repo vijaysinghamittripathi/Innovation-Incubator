@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
-import {BrokerDetailPage} from '../broker-detail/broker-detail';
+
 import {PropertyService} from '../../providers/property-service-mock';
 
 @Component({
@@ -21,7 +21,7 @@ export class PropertyDetailPage {
     }
 
     openBrokerDetail(broker) {
-        this.navCtrl.push(BrokerDetailPage, broker);
+       // this.navCtrl.push(BrokerDetailPage, broker);
     }
 
     favorite(property) {

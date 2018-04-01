@@ -12,22 +12,12 @@ import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {PropertyListPage} from '../pages/property-list/property-list';
 import {PropertyDetailPage} from '../pages/property-detail/property-detail';
-import {BrokerListPage} from '../pages/broker-list/broker-list';
-import {BrokerDetailPage} from '../pages/broker-detail/broker-detail';
-import {BrokerPropertyDetailPage} from '../pages/broker-detail/broker-property-detail';
-import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
-import {AboutPage} from '../pages/about/about';
-import {LoginPage} from '../pages/login/login';
-import {ContactPage} from '../pages/contact/contact';
-
+import { TutorialPage } from '../pages/tutorial/tutorial';
 import {PropertyService} from "../providers/property-service-mock";
-import {BrokerService} from "../providers/broker-service-mock";
-import { AuthService } from '../pages/login/auth.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage } from '../pages/home/home';
-import { LogoutPage } from '../pages/logout/logout';
+
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyA2h8-EqMIdg2JQazC-O3E-C6BwYFnzJIU',
@@ -41,17 +31,9 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     WelcomePage,
-    AboutPage,
     PropertyListPage,
     PropertyDetailPage,
-    FavoriteListPage,
-    BrokerListPage,
-    BrokerDetailPage,
-    LoginPage,
-    HomePage,
-    BrokerPropertyDetailPage,
-    ContactPage,
-    LogoutPage
+    TutorialPage
   ],
   imports: [
     BrowserModule,
@@ -64,25 +46,16 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     WelcomePage,
-    AboutPage,
     PropertyListPage,
     PropertyDetailPage,
-    FavoriteListPage,
-    BrokerListPage,
-    BrokerDetailPage,
-    LoginPage,
-    HomePage,
-    BrokerPropertyDetailPage,
-    ContactPage,
-    LogoutPage
+    TutorialPage
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     PropertyService,
-    BrokerService,
-    AuthService, AngularFireAuth, AngularFireDatabase,
+    AngularFireAuth, AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
