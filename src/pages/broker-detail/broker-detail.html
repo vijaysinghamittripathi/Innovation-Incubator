@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Broker</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="broker" *ngIf="broker.property">
+
+    <ion-card>
+
+        <ion-card-content>
+            <img src="{{broker.picture}}"/>
+            <h2>{{broker.name}}</h2>
+            <h3>{{broker.title}}</h3>
+        </ion-card-content>
+
+        <ion-list>
+            
+            <a href="tel:{{broker.phone}}" ion-item>
+                <ion-icon name="call" item-left></ion-icon>
+                <p>Call Mobile</p>
+                <h2>{{broker.mobilePhone}}</h2>
+            </a>
+        
+            <a href="mailto:{{broker.email}}" ion-item>
+                <ion-icon name="mail" item-left></ion-icon>
+                <p>Email</p>
+                <h2>{{broker.email}}</h2>
+            </a>
+            <button  ion-item (click)="openPropertyDetail(broker.property)">
+                    <ion-avatar item-left>
+                        <img src="{{broker.property.picture}}"/>
+                    </ion-avatar>
+                    <h2>{{broker.property.title}}</h2>
+                    <p>{{broker.property.price}}</p>
+            </button> 
+        </ion-list>
+
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{userData.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="profile">
+ 
+    <ion-card>
+
+        <ion-card-content>
+            <img src="{{userData.picture}}"/>
+            <h2>{{userData.name}}</h2>
+            
+        </ion-card-content>
+
+        <ion-list>
+            <a href="mailto:{{userData.email}}" ion-item>
+                <ion-icon name="mail" item-left></ion-icon>
+                <p>Email</p>
+                <h2>{{userData.email}}</h2>
+            </a>
+        </ion-list>
+
+    </ion-card>
+  
+</ion-content>
