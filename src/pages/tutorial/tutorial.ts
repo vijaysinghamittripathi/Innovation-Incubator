@@ -5,7 +5,8 @@ import { MenuController, NavController, Slides } from 'ionic-angular';
 //import { Storage } from '@ionic/storage';
 
 
-import { WelcomePage } from '../welcome/welcome';
+
+import { CategoryPage } from '../category/category';
 
 @Component({
   selector: 'page-tutorial',
@@ -26,7 +27,7 @@ export class TutorialPage {
    /* this.navCtrl.push(WelcomePage).then(() => {
       //this.storage.set('hasSeenTutorial', 'true');
     })*/
-    this.navCtrl.setRoot(WelcomePage);
+    this.navCtrl.setRoot(CategoryPage);
   }
 
   onSlideChangeStart(slider: Slides) {

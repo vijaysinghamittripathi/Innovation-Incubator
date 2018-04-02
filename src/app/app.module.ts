@@ -17,6 +17,8 @@ import {PropertyService} from "../providers/property-service-mock";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CategoryPage } from '../pages/category/category';
+import { CategoryService } from '../providers/category-service';
 
 
 export const firebaseConfig = {
@@ -33,7 +35,8 @@ export const firebaseConfig = {
     WelcomePage,
     PropertyListPage,
     PropertyDetailPage,
-    TutorialPage
+    TutorialPage,
+    CategoryPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ export const firebaseConfig = {
     WelcomePage,
     PropertyListPage,
     PropertyDetailPage,
-    TutorialPage
+    TutorialPage,
+    CategoryPage
 
   ],
   providers: [
@@ -56,6 +60,7 @@ export const firebaseConfig = {
     SplashScreen,
     PropertyService,
     AngularFireAuth, AngularFireDatabase,
+    CategoryService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
