@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import { CategoryService } from '../../providers/category-service';
+import { NavController } from 'ionic-angular';
+import { InnovationListPage } from '../Innovation-list/Innovation-list';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { CategoryService } from '../../providers/category-service';
 export class CategoryPage {
 
     private categorydata: Array<any[]>;
-    constructor(private categoryService: CategoryService) {
+    constructor(private categoryService: CategoryService, public navCtrl: NavController) {
         this.getCategories();
     }
 
@@ -17,5 +19,12 @@ export class CategoryPage {
          this.categoryService.getCategories()
         .subscribe(data => this.categorydata = data);
     }
+
+    itemTapped(event, item) {
+        // That's right, we're pushing to ourselves!
+        this.navCtrl.push(InnovationListPage, {
+          item: item
+        });
+      }
 
 }

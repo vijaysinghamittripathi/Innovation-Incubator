@@ -10,7 +10,6 @@ import { AngularFireAuth  } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
-import {PropertyListPage} from '../pages/property-list/property-list';
 import {PropertyDetailPage} from '../pages/property-detail/property-detail';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import {PropertyService} from "../providers/property-service-mock";
@@ -19,6 +18,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoryPage } from '../pages/category/category';
 import { CategoryService } from '../providers/category-service';
+import { InnovationListPage } from '../pages/Innovation-list/Innovation-list';
 
 
 export const firebaseConfig = {
@@ -33,10 +33,10 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     WelcomePage,
-    PropertyListPage,
     PropertyDetailPage,
     TutorialPage,
-    CategoryPage
+    CategoryPage,
+    InnovationListPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,7 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     WelcomePage,
-    PropertyListPage,
+    InnovationListPage,
     PropertyDetailPage,
     TutorialPage,
     CategoryPage

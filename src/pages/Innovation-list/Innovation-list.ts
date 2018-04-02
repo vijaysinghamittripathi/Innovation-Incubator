@@ -5,10 +5,10 @@ import {PropertyDetailPage} from '../property-detail/property-detail';
 import leaflet from 'leaflet';
 
 @Component({
-    selector: 'page-property-list',
-    templateUrl: 'property-list.html'
+    selector: 'page-innovation-list',
+    templateUrl: 'innovation-list.html'
 })
-export class PropertyListPage {
+export class InnovationListPage {
 
     properties: Array<any>;
     searchKey: string = "";

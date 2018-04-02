@@ -4,13 +4,13 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { Events } from 'ionic-angular';
 
-import {PropertyListPage} from '../pages/property-list/property-list';
 
 import {WelcomePage} from '../pages/welcome/welcome';
 
 import { PropertyService } from '../providers/property-service-mock';
 
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { InnovationListPage } from '../pages/Innovation-list/Innovation-list';
 
 export interface MenuItem {
     title: string;
@@ -45,7 +45,7 @@ export class MyApp {
 
 
         this.appMenuItems = [
-            {title: 'Properties', component: PropertyListPage, icon: 'home'},
+            {title: 'Properties', component: InnovationListPage, icon: 'home'},
             
         ];
 
