@@ -49,8 +49,6 @@ export class MyApp {
             
         ];
 
-       
-
         this.helpMenuItems = [
             {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
             
@@ -76,12 +74,6 @@ export class MyApp {
             this.splashScreen.hide();
         });
         this.menu.enable(false);
-        if(JSON.parse(localStorage.getItem('currentUser')) !=  null)
-        {
-            let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-           // this.accountMenuItems[0].title = currentUser.name;
-
-        }
     }
 
     openPage(page) {

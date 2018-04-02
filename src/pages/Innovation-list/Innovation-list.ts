@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
-import {Config, NavController} from 'ionic-angular';
+import {Config, NavController, ModalController} from 'ionic-angular';
 import {PropertyService} from '../../providers/property-service-mock';
 import {PropertyDetailPage} from '../property-detail/property-detail';
 import leaflet from 'leaflet';
+import { WalkthroughModalPage } from '../popup/popup-modal';
+
+
 
 @Component({
     selector: 'page-innovation-list',
-    templateUrl: 'innovation-list.html'
+    templateUrl: 'Innovation-list.html'
 })
 export class InnovationListPage {
 
@@ -15,8 +18,10 @@ export class InnovationListPage {
     viewMode: string = "list";
     map;
     markersGroup;
+    
 
-    constructor(public navCtrl: NavController, public service: PropertyService, public config: Config) {
+    constructor(public navCtrl: NavController, public service: PropertyService, public config: Config, 
+        public modalCtrl: ModalController) {
         this.findAll();
     }
 
@@ -24,6 +29,15 @@ export class InnovationListPage {
         this.navCtrl.push(PropertyDetailPage, property);
     }
 
+    openWalkthroughModal() {
+       this.openModal('WalkthroughModalPage');
+    }
+
+    openModal(pageName) {
+        console.log(pageName);
+        this.modalCtrl.create(WalkthroughModalPage, null, { cssClass: 'inset-modal' })
+                      .present();
+    }
     onInput(event) {
         this.service.findByName(this.searchKey)
             .then(data => {

@@ -9,7 +9,12 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="property-list">
+<ion-content >
+        <ion-fab right bottom>
+                <button ion-fab (click)="openWalkthroughModal()">
+                        <ion-icon  name="add"></ion-icon> 
+                </button>
+        </ion-fab>
 
     <ion-list *ngIf="viewMode==='list'">
 

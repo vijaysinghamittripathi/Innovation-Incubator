@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoryPage } from '../pages/category/category';
 import { CategoryService } from '../providers/category-service';
 import { InnovationListPage } from '../pages/Innovation-list/Innovation-list';
+import { WalkthroughModalPage } from '../pages/popup/popup-modal';
 
 
 export const firebaseConfig = {
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     PropertyDetailPage,
     TutorialPage,
     CategoryPage,
-    InnovationListPage
+    InnovationListPage,
+    WalkthroughModalPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ export const firebaseConfig = {
     InnovationListPage,
     PropertyDetailPage,
     TutorialPage,
-    CategoryPage
+    CategoryPage,
+    WalkthroughModalPage
 
   ],
   providers: [

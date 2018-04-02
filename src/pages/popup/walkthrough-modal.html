@@ -1,0 +1,59 @@
+
+<ion-content  class="round">
+        <div style="text-align:center; padding:10px; color:#6DC348;font-weight:bold; font-size:15px">Add Innovation Details</div>
+        <ion-list>
+ 
+                <form >
+             
+                    <ion-item>
+                        <ion-label floating>Innovation Title</ion-label>
+                        <ion-input  type="text"></ion-input>
+                    </ion-item>
+             
+                    <ion-item>
+                        <ion-label floating>Team name</ion-label>
+                        <ion-input  type="text"></ion-input>
+                    </ion-item>
+             
+                    <ion-item>
+                            <ion-label floating>Category</ion-label>
+                            <ion-select >
+                                <ion-option value="iot" checked="true">IoT</ion-option>
+                                <ion-option value="blockchain">Blockchain</ion-option>
+                                <ion-option value="ai">AI</ion-option>
+                                <ion-option value="robotics">Robotics</ion-option>
+                                <ion-option value="vr">VR</ion-option>
+                                <ion-option value="web">Web</ion-option>
+                            </ion-select>
+                    </ion-item>
+                    <ion-item>
+                            <ion-label floating>Rating</ion-label>
+                            <ion-select >
+                                <ion-option value="one" checked="true">1</ion-option>
+                                <ion-option value="two">2</ion-option>
+                                <ion-option value="three">3</ion-option>
+                                <ion-option value="four">4</ion-option>
+                                <ion-option value="five">5</ion-option>
+                            </ion-select>
+                    </ion-item>
+                    <ion-item>
+                            <ion-label floating>Status</ion-label>
+                            <ion-select >
+                                <ion-option value="complete" checked="true">Complete</ion-option>
+                                <ion-option value="inprogress">In-Progress</ion-option>
+                            </ion-select>
+                    </ion-item>
+                    <ion-item>
+                            <ion-label floating>Description</ion-label>
+                            <ion-textarea ></ion-textarea>
+                    </ion-item>
+                   
+                   
+                </form>
+                
+            </ion-list>
+           <div style="text-align:center;">
+                <button ion-button color="primary" style="padding:5px;" (click)="dismiss()" >Add Innovation</button>
+            </div>
+            
+</ion-content>

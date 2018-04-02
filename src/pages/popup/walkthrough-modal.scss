@@ -1,0 +1,30 @@
+page-walkthrough-modal {
+    .round {
+      border-radius: 2px;
+    }
+    .scroll-content {
+      overflow: auto;
+    }
+    
+   
+    ion-list {
+      margin: 5 !important;
+      overflow: auto;
+      
+    }
+    
+    .text-center {
+      text-align: center;
+      color: white;
+    }
+    .scroll-content {
+      border-radius: 3%;
+    }
+    button.footer-button {
+     
+      background-color: #578be4;
+      bottom: 5px;
+      position: absolute;
+      margin: 0;
+    }
+  }
