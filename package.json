@@ -1,8 +1,8 @@
 {
-  "name": "dreamhouse",
+  "name": "Innovation Incubator",
   "version": "0.0.0",
-  "author": "Christophe Coenraets",
-  "homepage": "http://coenraets.org/",
+  "author": "Innovation Incubator",
+  "homepage": "https://innovationincubator.info",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -54,5 +54,5 @@
       "locator": "ios"
     }
   ],
-  "description": "dreamhouse sample app"
+  "description": "Innovation Incubator app"
 }
