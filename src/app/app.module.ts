@@ -22,6 +22,7 @@ import { WalkthroughModalPage } from '../pages/popup/popup-modal';
 import { InnovationListComponent } from '../components/innovation-list/innovation-list';
 import { InnovationDetailsPage } from '../pages/innovation-details/innovation-details';
 import { YoutubePipe } from '../pipes/youtube/youtube';
+import { InnovationsService } from '../providers/innovations-service';
 
 
 export const firebaseConfig = {
@@ -67,7 +68,7 @@ export const firebaseConfig = {
     SplashScreen,
     PropertyService,
     AngularFireAuth, AngularFireDatabase,
-    CategoryService,
+    CategoryService, InnovationsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
