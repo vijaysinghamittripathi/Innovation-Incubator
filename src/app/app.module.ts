@@ -20,6 +20,9 @@ import { CategoryPage } from '../pages/category/category';
 import { CategoryService } from '../providers/category-service';
 import { InnovationListPage } from '../pages/Innovation-list/Innovation-list';
 import { WalkthroughModalPage } from '../pages/popup/popup-modal';
+import { InnovationListComponent } from '../components/innovation-list/innovation-list';
+import { InnovationDetailsPage } from '../pages/innovation-details/innovation-details';
+import { YoutubePipe } from '../pipes/youtube/youtube';
 
 
 export const firebaseConfig = {
@@ -38,7 +41,10 @@ export const firebaseConfig = {
     TutorialPage,
     CategoryPage,
     InnovationListPage,
-    WalkthroughModalPage
+    WalkthroughModalPage,
+    InnovationListComponent,
+    InnovationDetailsPage,
+    YoutubePipe
   ],
   imports: [
     BrowserModule,
@@ -55,8 +61,9 @@ export const firebaseConfig = {
     PropertyDetailPage,
     TutorialPage,
     CategoryPage,
-    WalkthroughModalPage
-
+    WalkthroughModalPage,
+    InnovationListComponent,
+    InnovationDetailsPage,
   ],
   providers: [
     StatusBar,
