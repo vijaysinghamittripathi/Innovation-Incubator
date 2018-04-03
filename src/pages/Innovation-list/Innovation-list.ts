@@ -5,8 +5,7 @@ import {PropertyDetailPage} from '../property-detail/property-detail';
 import leaflet from 'leaflet';
 import { WalkthroughModalPage } from '../popup/popup-modal';
 import { Content, Innovation, Team } from '../../models/innovation';
-
-
+import { InnovationDetailsPage } from '../innovation-details/innovation-details';
 
 @Component({
     selector: 'page-innovation-list',
@@ -153,7 +152,7 @@ export class InnovationListPage {
     ];
 
     public navigateToDetails(innovation: Innovation) {
-        this.navCtrl.push('InnovationDetailsPage', {
+        this.navCtrl.push(InnovationDetailsPage, {
             selectedInnovation: innovation,
             innovationList: this.innovationList
         });
