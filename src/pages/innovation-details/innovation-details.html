@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>innovation-details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content *ngIf="innovation?.content; else elseBlock">
+      <iframe width="315" height="315" [src]="innovation?.content.url | youtube" frameborder="0" allowfullscreen></iframe>
+    </ion-card-content>
+    <ng-template #elseBlock>
+      <img src="{{ innovation?.thumbnail }}">
+    </ng-template>
+    <ion-card-content>
+      <ion-card-title>{{ innovation.title }}</ion-card-title>
+      <ion-card-content>{{ innovation.description }}</ion-card-content>
+      <ion-item no-lines>
+        <ion-icon name="people" item-left></ion-icon>
+        {{ innovation.team.name }}
+      </ion-item>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <button ion-button icon-left small>
+            <ion-icon name="thumbs-up" clear></ion-icon><div>100 Likes</div>
+          </button>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button ion-button icon-left small>
+            <ion-icon name="text" clear></ion-icon><div> 20 Comments</div>
+          </button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
+</ion-content>

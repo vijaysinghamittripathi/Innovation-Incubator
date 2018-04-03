@@ -1,9 +1,8 @@
 {
-  "name": "dreamhouse",
-  "version": "0.0.0",
-  "author": "Christophe Coenraets",
-  "homepage": "http://coenraets.org/",
-  "private": true,
+  "name": "innovation-incubator",
+  "version": "1.0.0",
+  "description": "Innovation Incubator app",
+  "main": "index.js",
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -11,6 +10,16 @@
     "ionic:serve": "ionic-app-scripts serve",
     "start": "node server.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaysinghamittripathi/Innovation-Incubator.git"
+  },
+  "author": "Innovation Incubator",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijaysinghamittripathi/Innovation-Incubator/issues"
+  },
+  "homepage": "https://innovationincubator.info",
   "dependencies": {
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
@@ -53,6 +62,5 @@
       "version": "",
       "locator": "ios"
     }
-  ],
-  "description": "dreamhouse sample app"
+  ]
 }
