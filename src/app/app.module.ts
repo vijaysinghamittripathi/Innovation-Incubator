@@ -9,10 +9,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuth  } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
-import {WelcomePage} from '../pages/welcome/welcome';
-import {PropertyDetailPage} from '../pages/property-detail/property-detail';
+import { WelcomePage } from '../pages/welcome/welcome';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-import {PropertyService} from "../providers/property-service-mock";
+import { PropertyService } from "../providers/property-service-mock";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,7 +36,6 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     WelcomePage,
-    PropertyDetailPage,
     TutorialPage,
     CategoryPage,
     InnovationListPage,
@@ -58,7 +56,6 @@ export const firebaseConfig = {
     MyApp,
     WelcomePage,
     InnovationListPage,
-    PropertyDetailPage,
     TutorialPage,
     CategoryPage,
     WalkthroughModalPage,
