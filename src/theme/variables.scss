@@ -24,7 +24,7 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #84BF41,
+  primary:    #00a1de,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -60,7 +60,7 @@ $toolbar-md-background:                   color($colors, primary);
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+@import "ionic.theme.default.md";
 
 
 // Ionicons
@@ -76,3 +76,4 @@ $toolbar-md-background:                   color($colors, primary);
 
 @import "roboto";
 @import "noto-sans";
+
