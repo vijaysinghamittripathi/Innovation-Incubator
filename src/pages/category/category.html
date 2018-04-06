@@ -1,29 +1,33 @@
-<ion-header >
+<!--<ion-header >
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>Innovation Categories</ion-title>
     </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content no-bounce>
     <div *ngIf="categorydata" class="row c-center">
         <div *ngFor="let category of categorydata; let i = index" (click)="itemTapped($event, category)" class="row">
+            
             <div class="card col home" *ngIf="i%2==0">
                     <ion-thumbnail item-left>
                         <img src="{{category.category_thumb}}"/>
                     </ion-thumbnail>
                     <a class="item item-text-wrap">
                         <h1>{{category.category_name}}</h1>
+                        
+                        
                     </a>
             </div>
-            <div class="card col home" *ngIf="i%2!=0" >
+            <div class="card col home" *ngIf="i%2!==0" >
                 <ion-thumbnail item-left>
                     <img src="{{category.category_thumb}}"/>
                 </ion-thumbnail>
                 <a class="item item-text-wrap">
                     <h1>{{category.category_name}}</h1>
+                   
                 </a>
             </div>
         </div>

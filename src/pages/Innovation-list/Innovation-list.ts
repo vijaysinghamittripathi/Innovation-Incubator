@@ -3,7 +3,7 @@ import {Config, NavController, ModalController, NavParams} from 'ionic-angular';
 
 
 import { WalkthroughModalPage } from '../popup/popup-modal';
-import { Content, Innovation, Team } from '../../models/innovation';
+import {  Innovation } from '../../models/innovation';
 import { InnovationDetailsPage } from '../innovation-details/innovation-details';
 import { InnovationsService } from '../../providers/innovations-service';
 
