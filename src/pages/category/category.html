@@ -8,26 +8,27 @@
 </ion-header>-->
 
 <ion-content no-bounce>
-    <div *ngIf="categorydata" class="row c-center">
-        <div *ngFor="let category of categorydata; let i = index" (click)="itemTapped($event, category)" class="row">
+       
+    <div *ngIf="innovationdata" class="row c-center">
+       
+        <div *ngFor="let category of innovationdata; let i = index" (click)="itemTapped($event, category)" class="row">
             
             <div class="card col home" *ngIf="i%2==0">
                     <ion-thumbnail item-left>
-                        <img src="{{category.category_thumb}}"/>
+                        <img src="{{category.categoryObject.category_thumb}}"/>
                     </ion-thumbnail>
                     <a class="item item-text-wrap">
-                        <h1>{{category.category_name}}</h1>
-                        
-                        
+                        <h1>{{category.categoryObject.category_name}}</h1>
+                        <h4>{{category.innovationCount}}</h4>
                     </a>
             </div>
             <div class="card col home" *ngIf="i%2!==0" >
                 <ion-thumbnail item-left>
-                    <img src="{{category.category_thumb}}"/>
+                    <img src="{{category.categoryObject.category_thumb}}"/>
                 </ion-thumbnail>
                 <a class="item item-text-wrap">
-                    <h1>{{category.category_name}}</h1>
-                   
+                    <h1>{{category.categoryObject.category_name}}</h1>
+                    <h4>{{category.innovationCount}}</h4>
                 </a>
             </div>
         </div>
