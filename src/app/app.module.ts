@@ -26,11 +26,11 @@ import { InnovationsService } from '../providers/innovations-service';
 
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyA2h8-EqMIdg2JQazC-O3E-C6BwYFnzJIU',
-  authDomain: 'ngfbauth-6d5b0.firebaseapp.com',
-  databaseURL: 'https://ngfbauth-6d5b0.firebaseio.com',
-  storageBucket: 'ngfbauth-6d5b0.appspot.com',
-  messagingSenderId: '769768187112'
+  apiKey: 'AIzaSyDGO6GqmbyK6B1PZZJqaS96EPC7dyfv1kg',
+  authDomain: 'innovationincubator-a098b.firebaseapp.com',
+  databaseURL: 'https://innovationincubator-a098b.firebaseio.com',
+  storageBucket: 'innovationincubator-a098b.appspot.com',
+  messagingSenderId: '703725005227'
 };
 
 @NgModule({

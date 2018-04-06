@@ -13,14 +13,6 @@ export class InnovationsService {
     return this.db.list(this.basePath).valueChanges();
   }
 
-  /*getInnovationsPerCategory(categoryID) {
-
-     this.getAllInnovations().map((data) => data.json())
-     .filter((value) => (value).cat_innovation_id == categoryID)
-     .subscribe(val => console.log(val));
-    //.filter((data) => data['category_id'] == categoryID)
-    //.subscribe(val => console.log(val));
-    }*/
 
     
 }

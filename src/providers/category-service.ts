@@ -5,11 +5,13 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class CategoryService {
 
-  private basePath = '/categories';
+  private basePathCategory = '/categories';
+
   constructor(private db: AngularFireDatabase) {}
 
   
   getCategories(): Observable<any[]> {
-    return this.db.list(this.basePath).valueChanges();
+    return this.db.list(this.basePathCategory).valueChanges();
   }
+  
 }

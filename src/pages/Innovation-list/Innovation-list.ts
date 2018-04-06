@@ -3,7 +3,7 @@ import {Config, NavController, ModalController, NavParams} from 'ionic-angular';
 
 
 import { WalkthroughModalPage } from '../popup/popup-modal';
-import { Content, Innovation, Team } from '../../models/innovation';
+import {  Innovation } from '../../models/innovation';
 import { InnovationDetailsPage } from '../innovation-details/innovation-details';
 import { InnovationsService } from '../../providers/innovations-service';
 
@@ -22,15 +22,17 @@ export class InnovationListPage {
 
     ionViewWillLoad() {
         this.categorydata = this.navParams.get('item');
-        let selectedCategory = this.categorydata.category_id;
+        let selectedCategory = this.categorydata.categoryObject.category_id;
         this.getInnovationsPerCategory(selectedCategory);
     }
 
     getInnovationsPerCategory(categoryID) {
+        
         let innovation = this.innovationsService.getAllInnovations();
 
         innovation.subscribe((_items)=> {
             this.innovationdata = [];
+            
             _items.forEach(item => {
                 if( item.cat_innovation_id == categoryID) {
                     this.innovationdata.push(item as Innovation);
