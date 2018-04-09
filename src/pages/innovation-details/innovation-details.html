@@ -4,29 +4,35 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-card>
-    <ion-card-content *ngIf="innovation?.content; else elseBlock">
-      <div class="videoWrapper">
-        <iframe width="315" height="315" [src]="innovation?.content.url | youtube" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </ion-card-content>
-      <ng-template #elseBlock>
-        <img src="{{ innovation?.thumbnail }}">
-      </ng-template>
-      <ion-card-title>{{ innovation.title }}</ion-card-title>
-      <div class="card-subtitle">{{ innovation.description }}</div>
-      <ion-item no-lines>
-        <ion-icon name="people" item-left></ion-icon>
-        {{ innovation.team.name }}
-      </ion-item>
-      <ion-row>
-        <p class="social-reactions-text">
-          <ion-icon name="thumbs-up"></ion-icon> 100 Likes
-          <ion-icon name="text"></ion-icon> 20 Comments
-        </p>
-      </ion-row>
-    
-
-  </ion-card>
-  <innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
+<ion-card>
+  <div class="videoWrapper" *ngIf="innovation?.content; else elseBlock">
+    <iframe width="315" height="315" [src]="innovation?.content.url | youtube" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <ng-template #elseBlock>
+	  <img src="{{ innovation?.thumbnail }}">
+  </ng-template>
+  <ion-card-content>
+	  <ion-card-title>
+		  {{ innovation.title }}
+	  </ion-card-title>
+	  <p text-justify>
+		  {{ innovation.description }}
+	  </p>
+	  <div class="wrapper">
+		  <div class="content">
+			  <ion-item>
+				  <ion-icon name="people" item-left></ion-icon>
+				  <p>{{ innovation.team.name }}</p>
+			  </ion-item>
+		  </div>
+		  <div class="content">
+			  <ion-item>
+				  <ion-icon name="flask" item-left small></ion-icon>
+				  <p class="idea-status">{{ innovation.status }} </p>
+			  </ion-item>
+		  </div>
+	  </div>
+  </ion-card-content>
+</ion-card>
+<innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
 </ion-content>

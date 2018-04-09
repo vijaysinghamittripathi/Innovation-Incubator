@@ -2,20 +2,28 @@
   <ion-list-header>
     List of Innovation
   </ion-list-header>
-  <ion-card *ngFor="let idea of innovations">
-    <ion-item>
+  <ion-item *ngFor="let idea of innovations" no-lines>
         <ion-thumbnail item-left (click)="goToDetailsView(idea)">
           <img src="{{idea.thumbnail}}" />
         </ion-thumbnail>
         <h2 (click)="goToDetailsView(idea)">{{ idea.title }}</h2>
-        <p (click)="goToDetailsView(idea)">{{ idea.team_name }}</p>
-        <p (click)="goToDetailsView(idea)" class="social-reactions">
-          <ion-icon name="thumbs-up"></ion-icon> 100 Likes
-          <ion-icon name="text"></ion-icon> 20 Comments
-        </p>
+        <p (click)="goToDetailsView(idea)">{{ idea.description }}</p>
+	    <div class="wrapper">
+		    <div class="content">
+			    <ion-item>
+				    <ion-icon name="people" item-left></ion-icon>
+				    <p>{{ idea.team.name }}</p>
+			    </ion-item>
+		    </div>
+		    <div class="content">
+			    <ion-item>
+				    <ion-icon name="flask" item-left small></ion-icon>
+				    <p class="idea-status">{{ idea.status }} </p>
+			    </ion-item>
+		    </div>
+	    </div>
         <button (click)="openToast(idea)" item-right>
             <ion-icon name="more"></ion-icon>
         </button>
-    </ion-item>
-  </ion-card>
+  </ion-item>
 </ion-list>
