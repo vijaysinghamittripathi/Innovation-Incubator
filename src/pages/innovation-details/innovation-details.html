@@ -9,7 +9,7 @@
       <div class="videoWrapper">
         <iframe width="315" height="315" [src]="innovation?.content.url | youtube" frameborder="0" allowfullscreen></iframe>
       </div>
-
+    </ion-card-content>
       <ng-template #elseBlock>
         <img src="{{ innovation?.thumbnail }}">
       </ng-template>
@@ -25,7 +25,7 @@
           <ion-icon name="text"></ion-icon> 20 Comments
         </p>
       </ion-row>
-    </ion-card-content>
+    
 
   </ion-card>
   <innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
