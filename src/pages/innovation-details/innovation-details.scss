@@ -25,7 +25,18 @@ page-innovation-details {
     width: 100%;
     height: 100%;
   }
-  .social-reactions-text {
-    color: #00a1de;
+
+  .wrapper {
+    display: table;
+
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+
+      .idea-status::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
   }
 }
