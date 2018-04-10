@@ -24,6 +24,7 @@ import { WordCloudComponent } from '../components/word-cloud/word-cloud.componen
 import { InnovationDetailsPage } from '../pages/innovation-details/innovation-details';
 import { YoutubePipe } from '../pipes/youtube/youtube';
 import { InnovationsService } from '../providers/innovations-service';
+import { ContentFooterComponent } from '../components/content-footer/content-footer';
 
 
 export const firebaseConfig = {
@@ -45,7 +46,8 @@ export const firebaseConfig = {
     InnovationListComponent,
     InnovationDetailsPage,
     YoutubePipe,
-    WordCloudComponent
+    WordCloudComponent,
+    ContentFooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ export const firebaseConfig = {
     WalkthroughModalPage,
     InnovationListComponent,
     InnovationDetailsPage,
+    ContentFooterComponent,
   ],
   providers: [
     StatusBar,

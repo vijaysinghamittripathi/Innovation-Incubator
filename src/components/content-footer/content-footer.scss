@@ -1,0 +1,38 @@
+.ideation ion-icon {
+  color: red;
+}
+
+.prototype ion-icon {
+  color: orange;
+}
+
+.completed ion-icon {
+  color: green;
+}
+
+.footer {
+  display: table;
+  width: 100%;
+  .team, .status {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .team {
+    width: 80%;
+    padding: 0 10px;
+    .team-icon, .team-name {
+      display: table-cell;
+    }
+    .team-name {
+      vertical-align: middle;
+      padding: 5px 10px;
+    }
+    ion-icon {
+      font-size: 2.2em;
+    }
+  }
+  .status {
+    width: 20%;
+  }
+
+}

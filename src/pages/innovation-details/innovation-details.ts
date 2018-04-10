@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Content, NavParams } from 'ionic-angular';
 import { Innovation } from '../../models/innovation';
 
 @Component({
@@ -7,6 +7,7 @@ import { Innovation } from '../../models/innovation';
   templateUrl: 'innovation-details.html',
 })
 export class InnovationDetailsPage {
+    @ViewChild(Content) content: Content;
     public innovationList: Innovation[] = [];
     public innovation: Innovation;
 
@@ -19,5 +20,6 @@ export class InnovationDetailsPage {
 
     public loadInnovationDetails(innovation: Innovation) {
         this.innovation =  innovation;
+        this.content.scrollToTop(500);
     }
 }

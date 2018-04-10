@@ -3,15 +3,48 @@ innovation-list {
     color: #00a1de;
   }
 
-  .wrapper {
+  .idea-wrapper {
     display: table;
+    padding: 5px;
 
-    .content {
+    .idea-content, .idea-thumbnail, .idea-information {
       display: table-cell;
+      margin: 0;
+      padding: 5px;
+    }
+
+    .idea-thumbnail {
+      width: 25%;
       vertical-align: middle;
 
-      .idea-status::first-letter {
-        text-transform: uppercase;
+      ion-thumbnail {
+        height: 100%;
+      }
+    }
+
+    .idea-content {
+      width: 67%;
+      vertical-align: top;
+
+      .heading {
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+
+      .body {
+        margin-top: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+        color: #8e9093;
+      }
+    }
+    .idea-information {
+      width: 8%;
+      text-align: center;
+      ion-icon {
+        margin-top: 20px;
       }
     }
   }
