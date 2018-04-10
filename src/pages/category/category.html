@@ -1,36 +1,4 @@
-<!--<ion-header >
-    <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Innovation Categories</ion-title>
-    </ion-navbar>
-</ion-header>-->
 
 <ion-content no-bounce>
-       
-    <div *ngIf="innovationdata" class="row c-center">
-       
-        <div *ngFor="let category of innovationdata; let i = index" (click)="itemTapped($event, category)" class="row">
-            
-            <div class="card col home" *ngIf="i%2==0">
-                    <ion-thumbnail item-left>
-                        <img src="{{category.categoryObject.category_thumb}}"/>
-                    </ion-thumbnail>
-                    <a class="item item-text-wrap">
-                        <h1>{{category.categoryObject.category_name}}</h1>
-                        <h4>{{category.innovationCount}}</h4>
-                    </a>
-            </div>
-            <div class="card col home" *ngIf="i%2!==0" >
-                <ion-thumbnail item-left>
-                    <img src="{{category.categoryObject.category_thumb}}"/>
-                </ion-thumbnail>
-                <a class="item item-text-wrap">
-                    <h1>{{category.categoryObject.category_name}}</h1>
-                    <h4>{{category.innovationCount}}</h4>
-                </a>
-            </div>
-        </div>
-    </div>
+        <app-word-cloud *ngIf="innovationdata" [wordData]="innovationdata"></app-word-cloud>
 </ion-content>

@@ -22,7 +22,7 @@ export class InnovationListPage {
 
     ionViewWillLoad() {
         this.categorydata = this.navParams.get('item');
-        let selectedCategory = this.categorydata.categoryObject.category_id;
+        let selectedCategory = this.categorydata.category_id;
         this.getInnovationsPerCategory(selectedCategory);
     }
 

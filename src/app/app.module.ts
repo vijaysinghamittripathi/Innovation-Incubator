@@ -20,6 +20,7 @@ import { CategoryService } from '../providers/category-service';
 import { InnovationListPage } from '../pages/Innovation-list/Innovation-list';
 import { WalkthroughModalPage } from '../pages/popup/popup-modal';
 import { InnovationListComponent } from '../components/innovation-list/innovation-list';
+import { WordCloudComponent } from '../components/word-cloud/word-cloud.component';
 import { InnovationDetailsPage } from '../pages/innovation-details/innovation-details';
 import { YoutubePipe } from '../pipes/youtube/youtube';
 import { InnovationsService } from '../providers/innovations-service';
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     WalkthroughModalPage,
     InnovationListComponent,
     InnovationDetailsPage,
-    YoutubePipe
+    YoutubePipe,
+    WordCloudComponent
   ],
   imports: [
     BrowserModule,
