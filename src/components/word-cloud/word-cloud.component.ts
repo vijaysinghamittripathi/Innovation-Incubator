@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import * as D3 from 'd3';
 import { Events } from 'ionic-angular';
+import { Data } from '../../share/data';
 
 declare let d3: any;
 
@@ -13,6 +14,7 @@ export class WordCloudComponent implements OnInit {
   @Input() wordData;
   @Output() selectedCategory = new EventEmitter<any>();
   data = [];
+  private settingsData;
 
   private svg;               // SVG in which we will print our chart
   private margin: {          // Space between the svg borders and the actual chart graphic
@@ -28,7 +30,7 @@ export class WordCloudComponent implements OnInit {
   private thisref;
 
   constructor(public events: Events) {
-
+    this.settingsData = Data;
   }
 
   ngOnInit() {
@@ -47,8 +49,8 @@ export class WordCloudComponent implements OnInit {
   }
 
   private calculateFontSize(num, datalength): Number {
-    const minFontSize: number = 18;
-    const maxFontSize: number = 60;
+    const minFontSize: number =  (this.settingsData.minFontSize == null) ? 18 : this.settingsData.minFontSize;
+    const maxFontSize: number = (this.settingsData.maxFontSize == null) ? 96 : this.settingsData.maxFontSize;;
     
 
     let steps = Math.round(maxFontSize/datalength);
@@ -62,7 +64,7 @@ export class WordCloudComponent implements OnInit {
     return fontsize
   }
 
-  private getRandom() {
+  /* private getRandom() {
     const size = 10 + Math.random() * 100;
     if (size > 70 && this.tempData.length <= 10) {
       this.tempData.push(size);
@@ -74,7 +76,7 @@ export class WordCloudComponent implements OnInit {
    
     return size;
   }
-
+*/
   private setup() {
     this.margin = {
       top   : 10,
@@ -97,9 +99,9 @@ export class WordCloudComponent implements OnInit {
   }
 
   private populate() {
-    const fontFace: string = 'Roboto';//(this.wordData.settings.fontFace == null) ? 'Roboto' : this.wordData.settings.fontFace;
-    const fontWeight: string = 'bold';//(this.wordData.settings.fontWeight == null) ? 'bold' : this.wordData.settings.fontWeight;
-    const spiralType: string = 'archimedean';//(this.wordData.settings.spiral == null) ? 'archimedean' : this.wordData.settings.spiral;
+    const fontFace: string = (this.settingsData.fontFace == null) ? 'Roboto' : this.settingsData.fontFace;
+    const fontWeight: string = (this.settingsData.fontWeight == null) ? 'bold' : this.settingsData.fontWeight;
+    const spiralType: string = (this.settingsData.spiral == null) ? 'archimedean' : this.settingsData.spiral;
     
     d3.layout.cloud()
       .size([this.width, this.height])

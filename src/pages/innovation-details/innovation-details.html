@@ -5,7 +5,7 @@
 </ion-header>
 <ion-content>
 <ion-card>
-  <div class="videoWrapper" *ngIf="innovation?.content; else elseBlock">
+  <div class="videoWrapper" *ngIf="innovationContentType === 'video'; else elseBlock">
     <iframe width="315" height="315" [src]="innovation?.content.url | youtube" frameborder="0" allowfullscreen></iframe>
   </div>
   <ng-template #elseBlock>
@@ -17,7 +17,11 @@
 	  </ion-card-title>
 	  <p text-justify>
 		  {{ innovation.description }}
-	  </p>
+    </p>
+    <ion-item *ngIf="innovationContentType === 'pdf' || innovationContentType === 'presentation'">
+      <ion-label >Artifacts: <a href="{{innovation?.content.url}}" target="_blank">Download PDF</a></ion-label>
+    </ion-item>
+    
 	  <content-footer [teamName]="innovation.team.name" [status]="innovation.status"></content-footer>
   </ion-card-content>
 </ion-card>

@@ -3,7 +3,6 @@ import { CategoryService } from '../../providers/category-service';
 import { NavController, Events } from 'ionic-angular';
 import { InnovationListPage } from '../Innovation-list/Innovation-list';
 import { InnovationsService } from '../../providers/innovations-service';
-import { Data } from '../../share/data';
 import { WordCloudComponent } from '../../components/word-cloud/word-cloud.component';
 
 
@@ -17,23 +16,20 @@ export class CategoryPage {
     private categorydata: Array<any[]>;
     private innovationData: Array<any[]>;
     private innovationdata = [];
-    //data = Data;
     constructor(private categoryService: CategoryService, private innovationsService: InnovationsService, 
         public navCtrl: NavController, events:Events) {   
         events.subscribe('selected:category', text => {
             this.categorydata.forEach(item => {
-                console.log(item);
                 if (item['category_name'] === text) {
                     this.navCtrl.push(InnovationListPage, {
                         item: item
                       });
                 }
             });
-            console.log(text,'text')
         });
         this.getInnovations();     
     }
-
+    
     getCategories() {
          this.categoryService.getCategories()
          .subscribe(data => {

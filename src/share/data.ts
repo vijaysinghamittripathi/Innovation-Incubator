@@ -1,7 +1,6 @@
 export const Data: any = {
-    data: 'IOT BLOCKCHAIN VR ROBOTICS WEB AI',
-    settings: {
-        minFontSize: 20,
-        maxFontSize: 45,
+   settings: {
+        minFontSize: 18,
+        maxFontSize: 96,
     }
 };
