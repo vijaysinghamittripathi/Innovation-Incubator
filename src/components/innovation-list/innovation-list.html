@@ -1,8 +1,6 @@
 <ion-list>
-  <ion-list-header>
-    List of Innovation
-  </ion-list-header>
   <div *ngFor="let idea of innovations">
+    <ion-item>
 	  <div class="idea-wrapper">
 		  <div class="idea-thumbnail">
 			  <ion-thumbnail item-left (click)="goToDetailsView(idea)">
@@ -10,11 +8,15 @@
 			  </ion-thumbnail>
 		  </div>
 		  <div class="idea-content">
-			  <p class="heading" (click)="goToDetailsView(idea)">{{ idea.title }}</p>
+			  <div class="headingContainer">
+          <div class="heading" (click)="goToDetailsView(idea)">{{ idea.title }}</div>
+          <div class="idea-information"><ion-icon (click)="openToast(idea)" name="ios-information-circle-outline" small></ion-icon></div>
+        </div>
 			  <p class="body" (click)="goToDetailsView(idea)">{{ idea.description }}</p>
 			  <content-footer [teamName]="idea.team.name" [status]="idea.status"></content-footer>
 		  </div>
-		  <div class="idea-information"><ion-icon (click)="openToast(idea)" name="ios-information-circle-outline" small></ion-icon></div>
+
 	  </div>
+    </ion-item>
   </div>
 </ion-list>

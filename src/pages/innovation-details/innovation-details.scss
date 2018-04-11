@@ -39,4 +39,58 @@ page-innovation-details {
     }
 
   }
+  .ideation ion-icon {
+    color: red;
+  }
+
+  .prototype ion-icon {
+    color: orange;
+  }
+
+  .completed ion-icon {
+    color: green;
+  }
+
+  .footer {
+    display: table;
+    width: 100%;
+    .team, .status {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .team {
+      width: 95%;
+      .team-icon, .team-name {
+        display: table-cell;
+      }
+      .team-name {
+        vertical-align: middle;
+        padding: 5px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+      }
+      ion-icon {
+        font-size: 2.2em;
+      }
+    }
+    .teamDetail {
+      width: 50%;
+      .team-icon {
+        color: #00a1de;
+      }
+    }
+    .statusdetail {
+      width: 50%;
+    }
+    .status {
+      float:right;
+      margin-right: 30px;
+      margin-top: 10px;
+      width: 5%;
+    }
+
+  }
+
 }

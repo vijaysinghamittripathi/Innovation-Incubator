@@ -18,11 +18,21 @@
 	  <p text-justify>
 		  {{ innovation.description }}
     </p>
-    <ion-item *ngIf="innovationContentType === 'pdf' || innovationContentType === 'presentation'">
-      <ion-label >Artifacts: <a href="{{innovation?.content.url}}" target="_blank">Download PDF</a></ion-label>
-    </ion-item>
-    
-	  <content-footer [teamName]="innovation.team.name" [status]="innovation.status"></content-footer>
+<br/>
+
+    <div class="footer">
+      <div *ngIf="innovationContentType === 'pdf' || innovationContentType === 'presentation'">
+        <ion-label >Artifacts: <a href="{{innovation?.content.url}}" target="_blank">Download</a></ion-label>
+      </div>
+      <div class="teamDetail">
+        <span class="team-icon"><ion-icon name="people"></ion-icon></span>
+        <span class="team-name">{{ innovation.team.name }}</span>
+      </div>
+      <div class="statusdetail {{innovation.status}}">
+        <ion-icon name="ios-radio-button-on"></ion-icon>
+        <span class="team-name">{{ innovation.status }}</span>
+      </div>
+    </div>
   </ion-card-content>
 </ion-card>
 <innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
