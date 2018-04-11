@@ -28,6 +28,12 @@ export class InnovationDetailsPage {
 
     public loadInnovationDetails(innovation: Innovation) {
         this.innovation =  innovation;
+        if(this.innovation.content != undefined && this.innovation.content != null) {
+            this.innovationContentType = this.innovation.content.type
+        }
+        else {
+            this.innovationContentType = ''
+        }
         this.content.scrollToTop(500);
     }
 }
