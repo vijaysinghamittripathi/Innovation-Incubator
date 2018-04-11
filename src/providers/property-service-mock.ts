@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import properties from './mock-properties';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
@@ -73,7 +72,7 @@ export class PropertyService {
     else {
       return Promise.reject('No favorites');
     }
-    
+
     return Promise.resolve();
   }
 
@@ -82,12 +81,12 @@ export class PropertyService {
     this.af.list(this.basePath).valueChanges()
     .subscribe(response => response.map( data =>  that.setFavorites(data,userId)));
   }
-  
+
   private setFavorites(res, id) {
-    
+
   if(res.userid == id) {
     this.favoriteArr.push(res);
-    }  
+    }
   }
 
   resetFavoritesForNewUser() {
