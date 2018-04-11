@@ -18,21 +18,29 @@
     vertical-align: middle;
   }
   .team {
-    width: 80%;
-    padding: 0 10px;
-    .team-icon, .team-name {
+    width: 95%;
+    .team-icon {
       display: table-cell;
+      color: #00a1de;
     }
     .team-name {
+      display: table-cell;
       vertical-align: middle;
       padding: 5px 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100px;
     }
     ion-icon {
       font-size: 2.2em;
     }
   }
   .status {
-    width: 20%;
+    float:right;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 5%;
   }
 
 }

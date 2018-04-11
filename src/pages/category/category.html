@@ -1,7 +1,9 @@
 
 <ion-content no-bounce >
+  <div ion-fixed>
         <ion-spinner name="bubbles" *ngIf="!innovationdata"></ion-spinner>
     <div class="wd-cloud">
         <app-word-cloud *ngIf="innovationdata" [wordData]="innovationdata"></app-word-cloud>
     </div>
+  </div>
 </ion-content>
