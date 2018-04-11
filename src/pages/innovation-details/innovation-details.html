@@ -18,20 +18,7 @@
 	  <p text-justify>
 		  {{ innovation.description }}
 	  </p>
-	  <div class="wrapper">
-		  <div class="content">
-			  <ion-item>
-				  <ion-icon name="people" item-left></ion-icon>
-				  <p>{{ innovation.team.name }}</p>
-			  </ion-item>
-		  </div>
-		  <div class="content">
-			  <ion-item>
-				  <ion-icon name="flask" item-left small></ion-icon>
-				  <p class="idea-status">{{ innovation.status }} </p>
-			  </ion-item>
-		  </div>
-	  </div>
+	  <content-footer [teamName]="innovation.team.name" [status]="innovation.status"></content-footer>
   </ion-card-content>
 </ion-card>
 <innovation-list [innovations]="innovationList" (navigateToDetails)="loadInnovationDetails($event)"></innovation-list>
