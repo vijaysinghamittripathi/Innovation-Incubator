@@ -121,7 +121,7 @@ export class WordCloudComponent implements OnInit {
  
 
   private drawWordCloud(words) {
-    this.svg
+    let cloud = this.svg
         .selectAll('text')
         .data(words)
         .enter()
@@ -141,6 +141,7 @@ export class WordCloudComponent implements OnInit {
         .text(d => {
           return d.text;
         });
+
   }
 
 }

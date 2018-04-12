@@ -16,6 +16,7 @@ export class CategoryPage {
     private categorydata: Array<any[]>;
     private innovationData: Array<any[]>;
     private innovationdata = [];
+    private showSpinner: boolean;
     constructor(private categoryService: CategoryService, private innovationsService: InnovationsService, 
         public navCtrl: NavController, events:Events) {   
         events.subscribe('selected:category', text => {
@@ -27,6 +28,7 @@ export class CategoryPage {
                 }
             });
         });
+        this.showSpinner = true;
         this.getInnovations();     
     }
     
@@ -62,10 +64,14 @@ export class CategoryPage {
                 categoryObject: categoryItem
             };
             this.innovationdata.push(catObj);
+            this.showSpinner = false;
             if( this.categorydata.length == this.innovationdata.length) {
+               
                 this.innovationdata.sort((a, b) => parseFloat(a.innovationCount) - parseFloat(b.innovationCount));
                 this.innovationdata.reverse();
+                
                 this.cloudComponent.renderCloud(this.innovationdata);
+                
             }
             
     }

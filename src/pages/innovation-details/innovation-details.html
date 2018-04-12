@@ -26,8 +26,10 @@
       </div>
       <div class="teamDetail">
         <span class="team-icon"><ion-icon name="people"></ion-icon></span>
-        <span class="team-name">{{ innovation.team.name }}</span>
+        <span class="team-name">{{ innovation.team.name }}</span><br>
+        <ion-item *ngIf="innovation.team.participants"><span class="team-members">{{ innovation.team.participants }}</span></ion-item>
       </div>
+      
       <div class="statusdetail {{innovation.status}}">
         <ion-icon name="ios-radio-button-on"></ion-icon>
         <span class="team-name">{{ innovation.status }}</span>

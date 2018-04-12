@@ -113,9 +113,27 @@ page-category {
   }
 
   .wd-cloud {
-   // background-image: url("../../assets/img/BG.jpg");
+    background-image: url("../../assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     text-align: center;
-    padding-top: 87px;
+   
+  }
+
+  .show-cloud {
+    display: block;
+  }
+  .hide-cloud {
+    display: none;
+  }
+  .logo-style {
+    max-width:50%; 
+    margin-top: 38px;
+  }
+
+  ion-spinner {
+    display: block;
+    margin: auto;
   }
 
 }
