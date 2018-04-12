@@ -62,6 +62,7 @@ page-innovation-details {
       width: 95%;
       .team-icon, .team-name {
         display: table-cell;
+        
       }
       .team-name {
         vertical-align: middle;
@@ -76,11 +77,13 @@ page-innovation-details {
       }
     }
     .teamDetail {
-      width: 50%;
+      width: 100%;
       .team-icon {
         color: #00a1de;
+        margin: 3px;
       }
     }
+    
     .statusdetail {
       width: 50%;
     }

@@ -1,9 +1,10 @@
 
 <ion-content no-bounce >
   <div ion-fixed>
-        <ion-spinner name="bubbles" *ngIf="!innovationdata"></ion-spinner>
-    <div class="wd-cloud">
-        <app-word-cloud *ngIf="innovationdata" [wordData]="innovationdata"></app-word-cloud>
+        <ion-spinner name="bubbles" [ngClass]="{'show-cloud':showSpinner, 'hide-cloud':!showSpinner}"></ion-spinner>
+    <div class="wd-cloud" [ngClass]="{'show-cloud':!showSpinner, 'hide-cloud':showSpinner}">
+        <img src="../../assets/img/logo-innovation.png" class="logo-style"/>
+        <app-word-cloud  [wordData]="innovationdata"></app-word-cloud>
     </div>
   </div>
 </ion-content>
