@@ -3,5 +3,6 @@ export const Data: any = {
     settings: {
         minFontSize: 20,
         maxFontSize: 45,
+        datastring:'WORLD CLOUD'
     }
 };
