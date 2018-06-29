@@ -12,7 +12,7 @@ Follow these instructions to install the app and run it with the mock (in-memory
     npm install -g ionic
     ```
 
-1. Clone the repository:
+1. Clone this repository:
     ```
     git clone https://github.com/vijaysinghamittripathi/Innovation-Incubator.git
     ```
