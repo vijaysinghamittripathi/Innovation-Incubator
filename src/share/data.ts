@@ -9,6 +9,10 @@ export const Data: any = {
         minFontSize: 20,
         maxFontSize: 45,
         datastring:'WORLD CLOUD'
+<<<<<<< HEAD
 >>>>>>> d5c9014... Added data string
+=======
+>>>>>>> featurebranch-wordcloud
+>>>>>>> 7d05166b9a545cc54fd84187402d379efbe5e979
     }
 };
